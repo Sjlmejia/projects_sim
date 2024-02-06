@@ -1,0 +1,19 @@
+<h2 class="mb-2 text-lg font-semibold text-gray-900"> List Items:</h2>
+
+<div class="flex">
+  <ul class="max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
+    @for (item of items(); track $index) {
+      <li class="cursor-pointer" (click)="selectItem(item)">{{item.name}}</li>
+      <br/>
+    }
+  </ul>
+  @if (selectedItem()) {
+    <div class="flex flex-col">
+       <span>Name: {{selectedItem()?.name}}</span>
+        <span>
+          Details: {{selectedItem()?.details}}
+        </span>
+    </div>
+  }
+</div>
+

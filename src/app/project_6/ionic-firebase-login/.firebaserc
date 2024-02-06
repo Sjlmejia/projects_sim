@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "loginproject-f8393": {
+      "hosting": {
+        "app": [
+          "loginproject-f8393"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "loginproject-f8393"
+  }
+}

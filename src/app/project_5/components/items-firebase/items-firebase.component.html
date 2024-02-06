@@ -1,0 +1,50 @@
+<h2 class="mb-2 text-lg font-semibold text-gray-900">Firebase Form</h2>
+<form [formGroup]="myForm" (ngSubmit)="onSave()" autocomplete="off">
+  <div>
+    <label>Name</label><br>
+    <input type="text"
+            class="input-form"
+            [class.error-input]="isValidField('name')"
+            formControlName="name">
+    @if(isValidField('name')){
+      <span class="message-error">
+        {{ getMessageError('name') }}
+      </span>
+    }
+    <br>
+    <label>Description</label><br>
+    <input  type="text"
+            class="input-form"
+            [class.error-input]="isValidField('description')"
+            formControlName="description">
+    @if(isValidField('description')){
+      <span class="message-error">
+        {{ getMessageError('description') }}
+      </span>
+    }
+    <br>
+    <label>Price</label><br>
+    <input  type="number"
+            class="input-form"
+            [class.error-input]="isValidField('price')"
+            formControlName="price">
+    @if(isValidField('price')){
+      <span class="message-error">
+        {{ getMessageError('price') }}
+      </span>
+    }
+  </div>
+  <br>
+  <label>Image</label><br>
+  <input  type="file"
+          class="input-form"
+          [class.error-input]="isValidField('image')"
+          formControlName="image">
+  @if(isValidField('image')){
+    <span class="message-error">
+      {{ getMessageError('image') }}
+    </span>
+  }
+  <br>
+  <button class="submit-btn mt-3" type="submit">Send</button>
+</form>

@@ -1,0 +1,39 @@
+.error-input {
+  border: 1px solid red !important;
+}
+.message-error {
+  color: red;
+}
+
+
+.input-form {
+  display: block;
+  height: 10px;
+  width: 300px;
+  padding: 1rem;
+  font-family: Prelo-Medium;
+  font-size: .875rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #4a4a4a;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #c8c8c8;
+  border-radius: 4px;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.submit-btn {
+  background: #fd0;
+  color: #0f265c;
+  border-color: #fd0;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: 500;
+  height: 40px;
+  width: 80px;
+  white-space: nowrap;
+  font-family:Prelo-SemiBold,sans-serif;
+}

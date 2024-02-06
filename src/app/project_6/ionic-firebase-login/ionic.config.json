@@ -1,0 +1,7 @@
+{
+  "name": "ionic-firebase-login",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

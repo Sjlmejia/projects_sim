@@ -1,0 +1,35 @@
+  <h2 class="mb-2 text-lg font-semibold text-gray-900">{{title()}}</h2>
+  <form [formGroup]="myForm" (ngSubmit)="onSave()" autocomplete="off">
+    <div>
+      <label>Username</label><br>
+      <input type="text"
+              class="input-form"
+              [class.error-input]="isValidField('username')"
+              formControlName="username">
+      <span class="message-error"
+            *ngIf="isValidField('username')">
+            {{ getMessageError('username') }}
+      </span>
+      <br>
+      <label>Email Address</label><br>
+      <input  type="email"
+              class="input-form"
+              [class.error-input]="isValidField('email')"
+              formControlName="email">
+      <span class="message-error"
+            *ngIf="isValidField('email')">
+            {{ getMessageError('email') }}
+      </span>
+      <br>
+      <label>Password</label><br>
+      <input  type="password"
+              class="input-form"
+              [class.error-input]="isValidField('password')"
+              formControlName="password">
+          <span class="message-error"
+            *ngIf="isValidField('password')">
+            {{ getMessageError('password') }}
+      </span>
+    </div>
+    <button class="submit-btn mt-3" type="submit">Send</button>
+  </form>
